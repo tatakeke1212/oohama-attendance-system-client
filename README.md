@@ -1,0 +1,1 @@
+# oohama-attendance-system-client
