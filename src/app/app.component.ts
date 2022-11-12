@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'oohama-attendance-system-client';
+  title = '大浜　勤怠管理システム';
 }
