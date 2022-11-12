@@ -1,7 +1,22 @@
-<mat-card>
-    <p>{{ title }}</p>
-    <app-custom-input></app-custom-input>
-    <!-- <input type="text"/>
-    <input type="password"/> -->
-    <button>ログイン</button>
-</mat-card>
+<div class="login-container">
+  <mat-card class="login-card">
+    <div class="login-title">
+      <p>{{ title }}</p>
+    </div>
+    <div>
+      <app-custom-input
+        [type]="'text'"
+        [label]="'user'"
+        [required]="true"
+      ></app-custom-input>
+      <app-custom-input
+        [type]="'password'"
+        [label]="'password'"
+        [required]="true"
+      ></app-custom-input>
+    </div>
+    <div class="login-button">
+      <app-custom-button [name]="'ログイン'"></app-custom-button>
+    </div>
+  </mat-card>
+</div>
