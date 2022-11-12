@@ -6,11 +6,11 @@ import { TopComponent } from './top/top.component';
 const routes: Routes = [
   { path: '', redirectTo: '/top', pathMatch: 'full' },
   { path: 'top', component: TopComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
