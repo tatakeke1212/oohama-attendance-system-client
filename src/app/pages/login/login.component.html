@@ -7,7 +7,7 @@
       <app-custom-input
         [type]="'text'"
         [label]="'user'"
-        [required]="true"
+        [required]="false"
       ></app-custom-input>
       <app-custom-input
         [type]="'password'"
@@ -16,7 +16,7 @@
       ></app-custom-input>
     </div>
     <div class="login-button">
-      <app-custom-button [name]="'ログイン'"></app-custom-button>
+      <button mat-raised-button color="primary">ログイン</button>
     </div>
   </mat-card>
 </div>

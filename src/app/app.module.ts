@@ -4,16 +4,19 @@ import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { TopComponent } from './top/top.component';
+import { LoginComponent } from './pages/login/login.component';
+import { TopComponent } from './pages/top/top.component';
 import { CustomInputComponent } from './shared/custom-input/custom-input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CustomButtonComponent } from './shared/custom-button/custom-button.component';
 import { MatButtonModule } from '@angular/material/button';
+import { AttendanceComponent } from './pages/attendance/attendance.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
+import { ObserversModule } from '@angular/cdk/observers';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     LoginComponent,
     TopComponent,
     CustomInputComponent,
-    CustomButtonComponent,
+    AttendanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HttpClientModule,
   ],
   exports: [
     MatCardModule,
