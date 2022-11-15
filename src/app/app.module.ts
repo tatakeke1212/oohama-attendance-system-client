@@ -15,8 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { AttendanceComponent } from './pages/attendance/attendance.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule, NgFor, NgIf } from '@angular/common';
-import { ObserversModule } from '@angular/cdk/observers';
+import { SelectEmployeeComponent } from './pages/select-employee/select-employee.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +24,7 @@ import { ObserversModule } from '@angular/cdk/observers';
     TopComponent,
     CustomInputComponent,
     AttendanceComponent,
+    SelectEmployeeComponent,
   ],
   imports: [
     BrowserModule,
