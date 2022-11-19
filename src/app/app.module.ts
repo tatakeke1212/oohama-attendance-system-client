@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AttendanceComponent } from './pages/attendance/attendance.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectEmployeeComponent } from './pages/select-employee/select-employee.component';
+import { ManageComponent } from './pages/manage/manage.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SelectEmployeeComponent } from './pages/select-employee/select-employee
     CustomInputComponent,
     AttendanceComponent,
     SelectEmployeeComponent,
+    ManageComponent,
   ],
   imports: [
     BrowserModule,

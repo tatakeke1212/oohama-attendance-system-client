@@ -22,3 +22,9 @@
   margin: 10px;
   text-align: center;
 }
+
+.login-massage {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
