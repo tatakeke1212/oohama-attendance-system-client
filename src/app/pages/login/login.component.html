@@ -5,18 +5,26 @@
     </div>
     <div>
       <app-custom-input
+        [name]="'name'"
         [type]="'text'"
-        [label]="'user'"
-        [required]="false"
+        [label]="'name'"
+        [required]="true"
+        [(value)]="name"
+        (valueChange)="name = $event"
       ></app-custom-input>
       <app-custom-input
+        [name]="'password'"
         [type]="'password'"
         [label]="'password'"
         [required]="true"
+        [(value)]="password"
+        (valueChange)="password = $event"
       ></app-custom-input>
     </div>
     <div class="login-button">
-      <button mat-raised-button color="primary">ログイン</button>
+      <button mat-raised-button color="primary" (click)="onLogin()">
+        ログイン
+      </button>
     </div>
   </mat-card>
 </div>
