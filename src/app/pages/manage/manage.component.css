@@ -1,0 +1,41 @@
+.manage-container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.manage-box {
+    padding: 10px;
+    margin: 30px;
+}
+
+.employees-list-button {
+    background-color: #ffa500 !important;
+    margin: auto;
+    width: 500px;
+    height: 150px;
+    font-size: 50px;
+    border-radius:50px;
+    box-shadow:5px 5px 0px 0px #DEDEDE ;
+}
+
+.attendance-list-button {
+    background-color: #ffa500 !important;
+    margin: auto;
+    width: 500px;
+    height: 150px;
+    font-size: 50px;
+    border-radius:50px;
+    box-shadow:5px 5px 0px 0px #DEDEDE ;
+}
+
+.pay-calc-button {
+    background-color: #ffa500 !important;
+    margin: auto;
+    width: 500px;
+    height: 150px;
+    font-size: 50px;
+    border-radius:50px;
+    box-shadow:5px 5px 0px 0px #DEDEDE ;
+}

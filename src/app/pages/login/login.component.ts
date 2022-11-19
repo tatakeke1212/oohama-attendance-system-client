@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { base_url } from 'src/environments/environment';
 
 @Component({
@@ -12,17 +13,23 @@ export class LoginComponent implements OnInit {
 
   name = '';
   password = '';
+  massage = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {}
 
   onLogin() {
-    // console.log('login');
-    // console.log(this.name);
-    // console.log(this.password);
+    console.log('login');
+    console.log(this.name);
+    console.log(this.password);
     this.Login().subscribe((res) => {
-      // console.log('res: ', res);
+      console.log('res: ', res);
+      if (res.status === 200) {
+        this.router.navigate(['/manage']);
+      } else {
+        this.massage = 'ログインに失敗しました。';
+      }
     });
   }
 
