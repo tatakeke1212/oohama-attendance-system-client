@@ -13,10 +13,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { AttendanceComponent } from './pages/attendance/attendance.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectEmployeeComponent } from './pages/select-employee/select-employee.component';
-import { ManageComponent } from './pages/manage/manage.component';
+import { ManageTopComponent } from './pages/management/manage-top/manage-top.component';
+import { MatTableModule } from '@angular/material/table';
+import { EmployeeListComponent } from './pages/management/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,9 @@ import { ManageComponent } from './pages/manage/manage.component';
     LoginComponent,
     TopComponent,
     CustomInputComponent,
-    AttendanceComponent,
     SelectEmployeeComponent,
-    ManageComponent,
+    ManageTopComponent,
+    EmployeeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +41,7 @@ import { ManageComponent } from './pages/manage/manage.component';
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    MatTableModule,
   ],
   exports: [
     MatCardModule,

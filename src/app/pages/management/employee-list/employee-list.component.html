@@ -1,0 +1,80 @@
+<section class="container">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
+      <td mat-cell *matCellDef="let data">{{ data.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>name</th>
+      <td mat-cell *matCellDef="let data">{{ data.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name_kana">
+      <th mat-header-cell *matHeaderCellDef>name_kana</th>
+      <td mat-cell *matCellDef="let data">{{ data.name_kana }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef>gender</th>
+      <td mat-cell *matCellDef="let data">{{ data.gender }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>age</th>
+      <td mat-cell *matCellDef="let data">{{ data.age }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="del_flg">
+      <th mat-header-cell *matHeaderCellDef>del_flg</th>
+      <td mat-cell *matCellDef="let data">{{ data.del_flg }}</td>
+    </ng-container>
+
+    <tr
+      class="header-row"
+      mat-header-row
+      *matHeaderRowDef="columnName; sticky: true"
+    ></tr>
+    <tr mat-row *matRowDef="let row; columns: columnName"></tr>
+  </table>
+</section>
+
+<!-- <section class="container">
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>id</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.id }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>name</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name_kana">
+      <mat-header-cell *matHeaderCellDef>name_kana</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.name_kana }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="gender">
+      <mat-header-cell *matHeaderCellDef>gender</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.gender }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <mat-header-cell *matHeaderCellDef>age</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.age }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="del_flg">
+      <mat-header-cell *matHeaderCellDef>del_flg</mat-header-cell>
+      <mat-cell *matCellDef="let data">{{ data.del_flg }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row
+      class="header-row"
+      *matHeaderRowDef="columnName; sticky: true"
+    ></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnName"></mat-row>
+  </mat-table>
+</section> -->

@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       console.log('res: ', res);
       // ログイン成功したら管理のトップ画面に遷移
       if (res.status === EnumHttpStatus.OK) {
-        this.router.navigateByUrl('/manage');
+        this.router.navigateByUrl('/management-top');
       } else {
         this.massage = 'ログインに失敗しました。';
       }
@@ -38,8 +38,12 @@ export class LoginComponent implements OnInit {
 
   /** ログイン処理 */
   Login() {
-    return this.http.get<any>(
-      `${base_url}api/admin-user/login?name=${this.name}&password=${this.password}`
-    );
+    // return this.http.get<any>(
+    //   `${base_url}api/admin-user/login?name=${this.name}&password=${this.password}`
+    // );
+    return this.http.post<any>(`${base_url}api/admin-user/login`, {
+      name: this.name,
+      password: this.password,
+    });
   }
 }
