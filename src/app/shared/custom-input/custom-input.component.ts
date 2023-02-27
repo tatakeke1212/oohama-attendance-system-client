@@ -10,6 +10,7 @@ export class CustomInputComponent implements OnInit {
   @Input() type = '';
   @Input() label = '';
   @Input() required = false;
+  @Input() disabled = false;
   @Input()
   get value() {
     return this._value;

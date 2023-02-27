@@ -1,0 +1,59 @@
+.detial-container {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-card {
+    width: 800px;
+    height: 550px;
+    left: auto;
+    top: auto;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-item {
+    width: 500px;
+}
+
+.detail-button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-button {
+    width: 800px;
+    height: 50px;
+    font-size: xx-large;
+}
+
+.right {
+    text-align: right;
+}
+
+/* 削除済ユーザーのラベル */
+.delete-user-label {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem 1rem 4rem;
+    color: #fff;
+    border-radius: 100vh 0 0 100vh;
+    background: #fa4141;
+    margin: 0px 20px 0px 20px;
+}
+.delete-user-label:before {
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    content: '';
+    border-radius: 50%;
+    background: #fff;
+}

@@ -7,6 +7,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: #f5f5f5 !important;
     color: black !important;
 }
+.mat-form-field-wrapper {
+    margin: 0px 20px 0px 20px !important;
+}
 
 /* app-rootの高さ100% */
 app-root {
