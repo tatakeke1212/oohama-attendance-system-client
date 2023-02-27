@@ -1,0 +1,130 @@
+<div class="detial-container">
+  <mat-card class="detail-card">
+    <div class="detail-row">
+      <div class="detail-item">
+        <app-custom-input
+          [name]="'emp_id'"
+          [type]="'number'"
+          [label]="'従業員ID'"
+          [required]="true"
+          [disabled]="true"
+          [(value)]="employeeDetail.emp_id"
+          (valueChange)="employeeDetail.emp_id = $event"
+        ></app-custom-input>
+      </div>
+      <div class="detail-item right" *ngIf="employeeDetail.del_flg === 0">
+        <label class="delete-user-label"> 削除済ユーザー </label>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-item">
+        <app-custom-input
+          [name]="'name'"
+          [type]="'text'"
+          [label]="'名前'"
+          [required]="true"
+          [disabled]="false"
+          [(value)]="employeeDetail.name"
+          (valueChange)="employeeDetail.name = $event"
+        ></app-custom-input>
+      </div>
+      <div class="detail-item">
+        <app-custom-input
+          [name]="'name_kana'"
+          [type]="'text'"
+          [label]="'カナ'"
+          [required]="true"
+          [disabled]="false"
+          [(value)]="employeeDetail.name_kana"
+          (valueChange)="employeeDetail.name_kana = $event"
+        ></app-custom-input>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-item">
+        <app-custom-input
+          [name]="'gender'"
+          [type]="'text'"
+          [label]="'性別'"
+          [required]="true"
+          [disabled]="false"
+          [(value)]="employeeDetail.gender"
+          (valueChange)="employeeDetail.gender = $event"
+        ></app-custom-input>
+      </div>
+      <div class="detail-item">
+        <app-custom-input
+          [name]="'age'"
+          [type]="'text'"
+          [label]="'年齢'"
+          [required]="true"
+          [disabled]="false"
+          [(value)]="employeeDetail.age"
+          (valueChange)="employeeDetail.age = $event"
+        ></app-custom-input>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-item">
+        <app-custom-input
+          [name]="'birthday'"
+          [type]="'date'"
+          [label]="'誕生日'"
+          [required]="true"
+          [disabled]="false"
+          [(value)]="employeeDetail.birthday"
+          (valueChange)="employeeDetail.birthday = $event"
+        ></app-custom-input>
+      </div>
+      <div class="detail-item">
+        <app-custom-input
+          [name]="'tel'"
+          [type]="'text'"
+          [label]="'電話番号'"
+          [required]="true"
+          [disabled]="false"
+          [(value)]="employeeDetail.tel"
+          (valueChange)="employeeDetail.tel = $event"
+        ></app-custom-input>
+      </div>
+    </div>
+    <app-custom-input
+      [name]="'h_pay'"
+      [type]="'text'"
+      [label]="'時給'"
+      [required]="true"
+      [disabled]="false"
+      [(value)]="employeeDetail.h_pay"
+      (valueChange)="employeeDetail.h_pay = $event"
+    ></app-custom-input>
+    <app-custom-input
+      [name]="'address'"
+      [type]="'text'"
+      [label]="'住所'"
+      [required]="true"
+      [disabled]="false"
+      [(value)]="employeeDetail.address"
+      (valueChange)="employeeDetail.address = $event"
+    ></app-custom-input>
+    <app-custom-input
+      [name]="'memo'"
+      [type]="'textarea'"
+      [label]="'メモ'"
+      [required]="true"
+      [disabled]="false"
+      [(value)]="employeeDetail.memo"
+      (valueChange)="employeeDetail.memo = $event"
+    ></app-custom-input>
+  </mat-card>
+</div>
+
+<div class="detail-button-area">
+  <button
+    mat-raised-button
+    class="update-button"
+    color="primary"
+    (click)="onUpdateButtonClick()"
+  >
+    更新
+  </button>
+</div>

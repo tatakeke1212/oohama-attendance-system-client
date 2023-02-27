@@ -1,40 +1,48 @@
 <section class="container">
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>id</th>
-      <td mat-cell *matCellDef="let data">{{ data.id }}</td>
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let data; index as i" (dblclick)="dblClick(i)">
+        {{ data.id }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>name</th>
-      <td mat-cell *matCellDef="let data">{{ data.name }}</td>
+      <th mat-header-cell *matHeaderCellDef>名前</th>
+      <td mat-cell *matCellDef="let data; index as i" (dblclick)="dblClick(i)">
+        {{ data.name }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="name_kana">
-      <th mat-header-cell *matHeaderCellDef>name_kana</th>
-      <td mat-cell *matCellDef="let data">{{ data.name_kana }}</td>
+      <th mat-header-cell *matHeaderCellDef>カナ</th>
+      <td mat-cell *matCellDef="let data; index as i" (dblclick)="dblClick(i)">
+        {{ data.name_kana }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="gender">
-      <th mat-header-cell *matHeaderCellDef>gender</th>
-      <td mat-cell *matCellDef="let data">{{ data.gender }}</td>
+      <th mat-header-cell *matHeaderCellDef>性別</th>
+      <td mat-cell *matCellDef="let data; index as i" (dblclick)="dblClick(i)">
+        {{ data.gender }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="age">
-      <th mat-header-cell *matHeaderCellDef>age</th>
-      <td mat-cell *matCellDef="let data">{{ data.age }}</td>
+      <th mat-header-cell *matHeaderCellDef>年齢</th>
+      <td mat-cell *matCellDef="let data; index as i" (dblclick)="dblClick(i)">
+        {{ data.age }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="del_flg">
-      <th mat-header-cell *matHeaderCellDef>del_flg</th>
-      <td mat-cell *matCellDef="let data">{{ data.del_flg }}</td>
+      <th mat-header-cell *matHeaderCellDef>削除済み</th>
+      <td mat-cell *matCellDef="let data; index as i" (dblclick)="dblClick(i)">
+        {{ data.del_flg }}
+      </td>
     </ng-container>
 
-    <tr
-      class="header-row"
-      mat-header-row
-      *matHeaderRowDef="columnName; sticky: true"
-    ></tr>
+    <tr mat-header-row *matHeaderRowDef="columnName; sticky: true"></tr>
     <tr mat-row *matRowDef="let row; columns: columnName"></tr>
   </table>
 </section>
