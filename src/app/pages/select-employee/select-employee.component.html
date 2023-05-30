@@ -1,6 +1,11 @@
 <div class="select-employee-container">
   <div *ngFor="let emp of employeeList" class="select-employee-item">
-    <button mat-raised-button color="primary" class="select-employee-button">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="buttonClick(emp)"
+      class="select-employee-button"
+    >
       {{ emp.name }}
     </button>
   </div>

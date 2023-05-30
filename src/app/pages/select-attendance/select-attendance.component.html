@@ -1,0 +1,32 @@
+<div class="select-attendance-container">
+  <div class="start-button-item">
+    <button
+      mat-raised-button
+      color="primary"
+      class="start-button"
+      (click)="clickStart()"
+    >
+      出勤
+    </button>
+  </div>
+  <div class="end-button-item">
+    <button
+      mat-raised-button
+      color="warn"
+      class="end-button"
+      (click)="clickEnd()"
+    >
+      退勤
+    </button>
+  </div>
+  <div class="rest-in-button-item">
+    <button mat-raised-button class="rest-in-button" (click)="clickRestIn()">
+      休憩開始
+    </button>
+  </div>
+  <div class="rest-out-button-item">
+    <button mat-raised-button class="rest-out-button" (click)="clickRestOut()">
+      休憩終了
+    </button>
+  </div>
+</div>
