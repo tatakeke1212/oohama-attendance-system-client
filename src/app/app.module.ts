@@ -19,6 +19,7 @@ import { ManageTopComponent } from './pages/management/manage-top/manage-top.com
 import { MatTableModule } from '@angular/material/table';
 import { EmployeeListComponent } from './pages/management/employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './pages/management/employee-detail/employee-detail.component';
+import { SelectAttendanceComponent } from './pages/select-attendance/select-attendance.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { EmployeeDetailComponent } from './pages/management/employee-detail/empl
     TopComponent,
     CustomInputComponent,
     SelectEmployeeComponent,
+    SelectAttendanceComponent,
     ManageTopComponent,
     EmployeeListComponent,
     EmployeeDetailComponent,

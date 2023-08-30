@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { EmployeeDetailComponent } from './pages/management/employee-detail/employee-detail.component';
 import { EmployeeListComponent } from './pages/management/employee-list/employee-list.component';
 import { ManageTopComponent } from './pages/management/manage-top/manage-top.component';
+import { SelectAttendanceComponent } from './pages/select-attendance/select-attendance.component';
 import { SelectEmployeeComponent } from './pages/select-employee/select-employee.component';
 import { TopComponent } from './pages/top/top.component';
 
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/top', pathMatch: 'full' },
   { path: 'top', component: TopComponent },
   { path: 'selectEmployee', component: SelectEmployeeComponent },
+  { path: 'selectAttendance/:id', component: SelectAttendanceComponent },
   { path: 'login', component: LoginComponent },
   { path: 'management-top', component: ManageTopComponent },
   { path: 'employeeList', component: EmployeeListComponent },
